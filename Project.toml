@@ -1,0 +1,4 @@
+name = "Tracker"
+uuid = "5bb50d73-7b3d-4fdb-812f-7d3dc7487427"
+authors = ["Sato Cvik <sato@bankcrash.gg>"]
+version = "0.1.0"
