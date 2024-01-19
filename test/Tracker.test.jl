@@ -9,3 +9,20 @@ end
 fn(3)
 @show tracked[:y] # It's a dict, in which we track every single value we pushed into it, we just have to know which key did we push our tracked variables.
 
+
+
+
+using Tracker: @track
+gn() = begin
+	sleep(0.2) 
+	res = 5*5*5*3*rand(Float32,2,3)
+	@track :ournumber res  # <------
+	println("Ready...")
+	return 3
+end
+gn()
+
+#%%
+using Tracker: tracked
+tracked[:ournumber]
+
